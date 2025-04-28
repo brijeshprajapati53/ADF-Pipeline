@@ -5,6 +5,21 @@
 		"factoryName": {
 			"value": "adfBrijesh123"
 		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"BlobStorageForProducts_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "serverforadf.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "dbforadf"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "Brijesh"
+		},
 		"containerUri": {
 			"value": ""
 		},
