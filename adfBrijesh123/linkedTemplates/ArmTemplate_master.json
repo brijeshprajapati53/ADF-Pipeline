@@ -11,9 +11,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
 		},
+		"AzureSqlDatabase2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase2'"
+		},
 		"BlobStorageForProducts_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'BlobStorageForProducts'"
+		},
+		"CustomerAzureBlobStorage2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'CustomerAzureBlobStorage2'"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"type": "string",
@@ -24,6 +32,18 @@
 			"defaultValue": "dbforadf"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Brijesh"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "serverforadf.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "dbforadf"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Brijesh"
 		},
@@ -57,8 +77,14 @@
 					"AzureSqlDatabase1_password": {
 						"value": "[parameters('AzureSqlDatabase1_password')]"
 					},
+					"AzureSqlDatabase2_password": {
+						"value": "[parameters('AzureSqlDatabase2_password')]"
+					},
 					"BlobStorageForProducts_connectionString": {
 						"value": "[parameters('BlobStorageForProducts_connectionString')]"
+					},
+					"CustomerAzureBlobStorage2_connectionString": {
+						"value": "[parameters('CustomerAzureBlobStorage2_connectionString')]"
 					},
 					"AzureSqlDatabase1_properties_typeProperties_server": {
 						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
@@ -68,6 +94,15 @@
 					},
 					"AzureSqlDatabase1_properties_typeProperties_userName": {
 						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_userName')]"
 					}
 				}
 			},
