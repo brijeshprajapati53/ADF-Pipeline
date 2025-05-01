@@ -1,5 +1,5 @@
 {
-	"name": "MoviesDB",
+	"name": "moviesDB",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ADLSGen2",
