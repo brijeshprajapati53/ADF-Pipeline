@@ -12,8 +12,20 @@
 					"name": "ProductStream"
 				}
 			],
-			"sinks": [],
-			"transformations": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ProductBlobJson",
+						"type": "DatasetReference"
+					},
+					"name": "SinkBlob"
+				}
+			],
+			"transformations": [
+				{
+					"name": "CalculatedMarkup"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          ProductID as integer,",
@@ -37,7 +49,12 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> ProductStream"
+				"     format: 'table') ~> ProductStream",
+				"ProductStream derive(Markup = ListPrice / StandardCost) ~> CalculatedMarkup",
+				"CalculatedMarkup sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> SinkBlob"
 			]
 		}
 	}
