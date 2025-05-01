@@ -5,6 +5,12 @@
 		"factoryName": {
 			"value": "adfBrijesh123"
 		},
+		"ADLSGen12_accountKey": {
+			"value": ""
+		},
+		"ADLSGen2_accountKey": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_password": {
 			"value": ""
 		},
@@ -16,6 +22,12 @@
 		},
 		"CustomerAzureBlobStorage2_connectionString": {
 			"value": ""
+		},
+		"ADLSGen12_properties_typeProperties_url": {
+			"value": "https://storageforadlsbrijesh1.dfs.core.windows.net/"
+		},
+		"ADLSGen2_properties_typeProperties_url": {
+			"value": "https://storageforadlsbrijesh1.dfs.core.windows.net/"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"value": "serverforadf.database.windows.net"
