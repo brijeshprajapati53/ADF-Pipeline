@@ -29,6 +29,9 @@
 		"Taxi Trip DB_password": {
 			"value": ""
 		},
+		"TripAggregateBlob_connectionString": {
+			"value": ""
+		},
 		"ADLS Trip Data_properties_typeProperties_url": {
 			"value": "https://storageforadlsbrijesh1.dfs.core.windows.net/"
 		},

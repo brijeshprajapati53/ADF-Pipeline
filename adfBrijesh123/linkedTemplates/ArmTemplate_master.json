@@ -39,6 +39,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'Taxi Trip DB'"
 		},
+		"TripAggregateBlob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'TripAggregateBlob'"
+		},
 		"ADLS Trip Data_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://storageforadlsbrijesh1.dfs.core.windows.net/"
@@ -137,6 +141,9 @@
 					},
 					"Taxi Trip DB_password": {
 						"value": "[parameters('Taxi Trip DB_password')]"
+					},
+					"TripAggregateBlob_connectionString": {
+						"value": "[parameters('TripAggregateBlob_connectionString')]"
 					},
 					"ADLS Trip Data_properties_typeProperties_url": {
 						"value": "[parameters('ADLS Trip Data_properties_typeProperties_url')]"
