@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "adfBrijesh123"
 		},
+		"ADLS Trip Data_accountKey": {
+			"value": ""
+		},
 		"ADLSGen12_accountKey": {
 			"value": ""
 		},
@@ -22,6 +25,12 @@
 		},
 		"CustomerAzureBlobStorage2_connectionString": {
 			"value": ""
+		},
+		"Taxi Trip DB_password": {
+			"value": ""
+		},
+		"ADLS Trip Data_properties_typeProperties_url": {
+			"value": "https://storageforadlsbrijesh1.dfs.core.windows.net/"
 		},
 		"ADLSGen12_properties_typeProperties_url": {
 			"value": "https://storageforadlsbrijesh1.dfs.core.windows.net/"
@@ -45,6 +54,15 @@
 			"value": "dbforadf"
 		},
 		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"value": "Brijesh"
+		},
+		"Taxi Trip DB_properties_typeProperties_server": {
+			"value": "serverforadf.database.windows.net"
+		},
+		"Taxi Trip DB_properties_typeProperties_database": {
+			"value": "taxi-data"
+		},
+		"Taxi Trip DB_properties_typeProperties_userName": {
 			"value": "Brijesh"
 		}
 	}

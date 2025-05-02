@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfBrijesh123"
 		},
+		"ADLS Trip Data_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ADLS Trip Data'"
+		},
 		"ADLSGen12_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ADLSGen12'"
@@ -30,6 +34,14 @@
 		"CustomerAzureBlobStorage2_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'CustomerAzureBlobStorage2'"
+		},
+		"Taxi Trip DB_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'Taxi Trip DB'"
+		},
+		"ADLS Trip Data_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storageforadlsbrijesh1.dfs.core.windows.net/"
 		},
 		"ADLSGen12_properties_typeProperties_url": {
 			"type": "string",
@@ -63,6 +75,18 @@
 			"type": "string",
 			"defaultValue": "Brijesh"
 		},
+		"Taxi Trip DB_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "serverforadf.database.windows.net"
+		},
+		"Taxi Trip DB_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "taxi-data"
+		},
+		"Taxi Trip DB_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Brijesh"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -90,6 +114,9 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"ADLS Trip Data_accountKey": {
+						"value": "[parameters('ADLS Trip Data_accountKey')]"
+					},
 					"ADLSGen12_accountKey": {
 						"value": "[parameters('ADLSGen12_accountKey')]"
 					},
@@ -107,6 +134,12 @@
 					},
 					"CustomerAzureBlobStorage2_connectionString": {
 						"value": "[parameters('CustomerAzureBlobStorage2_connectionString')]"
+					},
+					"Taxi Trip DB_password": {
+						"value": "[parameters('Taxi Trip DB_password')]"
+					},
+					"ADLS Trip Data_properties_typeProperties_url": {
+						"value": "[parameters('ADLS Trip Data_properties_typeProperties_url')]"
 					},
 					"ADLSGen12_properties_typeProperties_url": {
 						"value": "[parameters('ADLSGen12_properties_typeProperties_url')]"
@@ -131,6 +164,15 @@
 					},
 					"AzureSqlDatabase2_properties_typeProperties_userName": {
 						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_userName')]"
+					},
+					"Taxi Trip DB_properties_typeProperties_server": {
+						"value": "[parameters('Taxi Trip DB_properties_typeProperties_server')]"
+					},
+					"Taxi Trip DB_properties_typeProperties_database": {
+						"value": "[parameters('Taxi Trip DB_properties_typeProperties_database')]"
+					},
+					"Taxi Trip DB_properties_typeProperties_userName": {
+						"value": "[parameters('Taxi Trip DB_properties_typeProperties_userName')]"
 					}
 				}
 			},
