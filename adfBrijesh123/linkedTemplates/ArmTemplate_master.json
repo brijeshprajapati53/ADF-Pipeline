@@ -43,6 +43,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'TripAggregateBlob'"
 		},
+		"Flipkart BlobStorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Flipkart BlobStorage'"
+		},
 		"ADLS Trip Data_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://storageforadlsbrijesh1.dfs.core.windows.net/"
@@ -144,6 +148,9 @@
 					},
 					"TripAggregateBlob_connectionString": {
 						"value": "[parameters('TripAggregateBlob_connectionString')]"
+					},
+					"Flipkart BlobStorage_connectionString": {
+						"value": "[parameters('Flipkart BlobStorage_connectionString')]"
 					},
 					"ADLS Trip Data_properties_typeProperties_url": {
 						"value": "[parameters('ADLS Trip Data_properties_typeProperties_url')]"

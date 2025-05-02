@@ -43,6 +43,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'TripAggregateBlob'"
 		},
+		"Flipkart BlobStorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Flipkart BlobStorage'"
+		},
 		"ADLS Trip Data_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://storageforadlsbrijesh1.dfs.core.windows.net/"
@@ -280,6 +284,19 @@
 				"type": "AzureBlobStorage",
 				"typeProperties": {
 					"connectionString": "[parameters('TripAggregateBlob_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Flipkart BlobStorage')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('Flipkart BlobStorage_connectionString')]"
 				}
 			},
 			"dependsOn": []
@@ -677,34 +694,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/Taxi Trip DB')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/TripAggregateCsv')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "TripAggregateBlob",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "DelimitedText",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobStorageLocation",
-						"fileName": "TripAggregations.csv",
-						"container": "trip-data"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": []
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/TripAggregateBlob')]"
 			]
 		}
 	]
