@@ -12,8 +12,26 @@
 					"name": "FlipkartDataFlow"
 				}
 			],
-			"sinks": [],
-			"transformations": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "Flipkart_Output_Parquet",
+						"type": "DatasetReference"
+					},
+					"name": "ParquetSink"
+				}
+			],
+			"transformations": [
+				{
+					"name": "Flipkartfilter1"
+				},
+				{
+					"name": "AddPositiveRatio"
+				},
+				{
+					"name": "AddTotalStars"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          id as string,",
@@ -33,7 +51,17 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> FlipkartDataFlow"
+				"     ignoreNoFilesFound: false) ~> FlipkartDataFlow",
+				"FlipkartDataFlow filter(toInteger(norating1) < 10 || toInteger(noreviews1) < 10\r",
+				") ~> Flipkartfilter1",
+				"Flipkartfilter1 derive(positive_review_ratio = toInteger(star_5f) / toInteger(norating1)) ~> AddPositiveRatio",
+				"AddPositiveRatio derive(total_stars = toInteger(star_1f) * 1 + toInteger(star_2f) * 2 + toInteger(star_3f) * 3 + toInteger(star_4f) * 4 + toInteger(star_5f) * 5\r",
+				") ~> AddTotalStars",
+				"AddTotalStars sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'parquet',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> ParquetSink"
 			]
 		}
 	}
