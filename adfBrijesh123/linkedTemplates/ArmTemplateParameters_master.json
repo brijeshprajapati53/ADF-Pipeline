@@ -14,10 +14,19 @@
 		"ADLSGen2_accountKey": {
 			"value": ""
 		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_password": {
 			"value": ""
 		},
 		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
+		"AzureSqlDatabaseforAdventureWorks_password": {
+			"value": ""
+		},
+		"AzureSqlDatabaseforAdventuresWork_password": {
 			"value": ""
 		},
 		"BlobStorageForProducts_connectionString": {
@@ -26,13 +35,13 @@
 		"CustomerAzureBlobStorage2_connectionString": {
 			"value": ""
 		},
+		"Flipkart BlobStorage_connectionString": {
+			"value": ""
+		},
 		"Taxi Trip DB_password": {
 			"value": ""
 		},
 		"TripAggregateBlob_connectionString": {
-			"value": ""
-		},
-		"Flipkart BlobStorage_connectionString": {
 			"value": ""
 		},
 		"ADLS Trip Data_properties_typeProperties_url": {
@@ -60,6 +69,24 @@
 			"value": "dbforadf"
 		},
 		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"value": "Brijesh"
+		},
+		"AzureSqlDatabaseforAdventureWorks_properties_typeProperties_server": {
+			"value": "serverforadf.database.windows.net"
+		},
+		"AzureSqlDatabaseforAdventureWorks_properties_typeProperties_database": {
+			"value": "AdventureWorksDW2022"
+		},
+		"AzureSqlDatabaseforAdventureWorks_properties_typeProperties_userName": {
+			"value": "Brijesh"
+		},
+		"AzureSqlDatabaseforAdventuresWork_properties_typeProperties_server": {
+			"value": "serverforadf.database.windows.net"
+		},
+		"AzureSqlDatabaseforAdventuresWork_properties_typeProperties_database": {
+			"value": "dbforadf"
+		},
+		"AzureSqlDatabaseforAdventuresWork_properties_typeProperties_userName": {
 			"value": "Brijesh"
 		},
 		"Taxi Trip DB_properties_typeProperties_server": {

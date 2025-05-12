@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ADLSGen2'"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
 		"AzureSqlDatabase1_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
@@ -26,6 +30,14 @@
 		"AzureSqlDatabase2_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDatabase2'"
+		},
+		"AzureSqlDatabaseforAdventureWorks_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabaseforAdventureWorks'"
+		},
+		"AzureSqlDatabaseforAdventuresWork_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabaseforAdventuresWork'"
 		},
 		"BlobStorageForProducts_connectionString": {
 			"type": "secureString",
@@ -35,6 +47,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'CustomerAzureBlobStorage2'"
 		},
+		"Flipkart BlobStorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Flipkart BlobStorage'"
+		},
 		"Taxi Trip DB_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'Taxi Trip DB'"
@@ -42,10 +58,6 @@
 		"TripAggregateBlob_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'TripAggregateBlob'"
-		},
-		"Flipkart BlobStorage_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'Flipkart BlobStorage'"
 		},
 		"ADLS Trip Data_properties_typeProperties_url": {
 			"type": "string",
@@ -80,6 +92,30 @@
 			"defaultValue": "dbforadf"
 		},
 		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Brijesh"
+		},
+		"AzureSqlDatabaseforAdventureWorks_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "serverforadf.database.windows.net"
+		},
+		"AzureSqlDatabaseforAdventureWorks_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "AdventureWorksDW2022"
+		},
+		"AzureSqlDatabaseforAdventureWorks_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Brijesh"
+		},
+		"AzureSqlDatabaseforAdventuresWork_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "serverforadf.database.windows.net"
+		},
+		"AzureSqlDatabaseforAdventuresWork_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "dbforadf"
+		},
+		"AzureSqlDatabaseforAdventuresWork_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Brijesh"
 		},
@@ -131,11 +167,20 @@
 					"ADLSGen2_accountKey": {
 						"value": "[parameters('ADLSGen2_accountKey')]"
 					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
 					"AzureSqlDatabase1_password": {
 						"value": "[parameters('AzureSqlDatabase1_password')]"
 					},
 					"AzureSqlDatabase2_password": {
 						"value": "[parameters('AzureSqlDatabase2_password')]"
+					},
+					"AzureSqlDatabaseforAdventureWorks_password": {
+						"value": "[parameters('AzureSqlDatabaseforAdventureWorks_password')]"
+					},
+					"AzureSqlDatabaseforAdventuresWork_password": {
+						"value": "[parameters('AzureSqlDatabaseforAdventuresWork_password')]"
 					},
 					"BlobStorageForProducts_connectionString": {
 						"value": "[parameters('BlobStorageForProducts_connectionString')]"
@@ -143,14 +188,14 @@
 					"CustomerAzureBlobStorage2_connectionString": {
 						"value": "[parameters('CustomerAzureBlobStorage2_connectionString')]"
 					},
+					"Flipkart BlobStorage_connectionString": {
+						"value": "[parameters('Flipkart BlobStorage_connectionString')]"
+					},
 					"Taxi Trip DB_password": {
 						"value": "[parameters('Taxi Trip DB_password')]"
 					},
 					"TripAggregateBlob_connectionString": {
 						"value": "[parameters('TripAggregateBlob_connectionString')]"
-					},
-					"Flipkart BlobStorage_connectionString": {
-						"value": "[parameters('Flipkart BlobStorage_connectionString')]"
 					},
 					"ADLS Trip Data_properties_typeProperties_url": {
 						"value": "[parameters('ADLS Trip Data_properties_typeProperties_url')]"
@@ -178,6 +223,24 @@
 					},
 					"AzureSqlDatabase2_properties_typeProperties_userName": {
 						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabaseforAdventureWorks_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabaseforAdventureWorks_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabaseforAdventureWorks_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabaseforAdventureWorks_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabaseforAdventureWorks_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabaseforAdventureWorks_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabaseforAdventuresWork_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabaseforAdventuresWork_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabaseforAdventuresWork_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabaseforAdventuresWork_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabaseforAdventuresWork_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabaseforAdventuresWork_properties_typeProperties_userName')]"
 					},
 					"Taxi Trip DB_properties_typeProperties_server": {
 						"value": "[parameters('Taxi Trip DB_properties_typeProperties_server')]"
@@ -210,6 +273,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'adfBrijesh123_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "adfBrijesh123_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adfBrijesh123_ArmTemplate_1')]"
 			]
 		}
 	]
